@@ -49,7 +49,7 @@ When both files are complete and reviewed, the folder is done. The `implementati
 
 ### Data Engineering
 Focus on: pipeline reliability, scalability, data quality, cost efficiency.
-Key tech: Spark, dbt, Airflow/Prefect, Kafka, Snowflake/BigQuery/Redshift, datalake/lakehouse, SQL/Nosql at scale, CDC, orchestration.
+Key tech: Spark, dbt, Airflow/Prefect, Kafka, Snowflake/BigQuery/Redshift, datalake/lakehouse, SQL at scale, CDC, orchestration.
 
 ### MLOps
 Focus on: model lifecycle, reproducibility, CI/CD for ML, monitoring, infra.
