@@ -6,20 +6,20 @@
 ┌─────────────────────────────────────────────────────────────┐
 │                     Docker Compose Network                  │
 │                                                             │
-│  ┌──────────────┐    psycopg2     ┌────────────────────┐   │
-│  │  PostgreSQL  │ ◄────────────── │   Python Worker    │   │
-│  │  (source +   │                 │   (pipeline.py)    │   │
-│  │  state store)│ ────────────► │   - scheduler      │   │
-│  └──────────────┘  pipeline_state │   - extractor      │   │
-│                                   │   - transformer    │   │
-│                                   │   - loader         │   │
-│                                   └────────┬───────────┘   │
+│  ┌──────────────┐    psycopg2     ┌────────────────────┐    │
+│  │  PostgreSQL  │ ◄────────────── │   Python Worker    │    │
+│  │  (source +   │                 │   (pipeline.py)    │    │
+│  │  state store)│ ────────────►   │   - scheduler      │    │
+│  └──────────────┘  pipeline_state │   - extractor      │    │
+│                                   │   - transformer    │    │
+│                                   │   - loader         │    │
+│                                   └────────┬───────────┘    │
 │                                            │ Bolt           │
 │                                            │ (neo4j-driver) │
-│                                   ┌────────▼───────────┐   │
-│                                   │      Neo4j 5.x     │   │
-│                                   │  (graph replica)   │   │
-│                                   └────────────────────┘   │
+│                                   ┌────────▼───────────┐    │
+│                                   │      Neo4j 5.x     │    │
+│                                   │  (graph replica)   │    │
+│                                   └────────────────────┘    │
 └─────────────────────────────────────────────────────────────┘
 ```
 
